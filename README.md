@@ -12,6 +12,7 @@ This is a beginner level task for practicing exception handling.
 
 1. Add exception handling constructions (try-catch) to [HandlingExceptions.cs](ExceptionHandling/HandlingExceptions.cs) file. See TODO comments there.
 2. Add exception throwing code (throw) to [ThrowingExceptions.cs](ExceptionHandling/ThrowingExceptions.cs) file. See TODO comments there.
+3. Read a [discussion about using non-specific exception types for throwing exceptions](https://stackoverflow.com/questions/22453650/why-are-we-not-to-throw-these-exceptions) and [CA2201 rule documentation](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca2201). You can fix the warning in the [HandlingExceptions.cs](ExceptionHandling/HandlingExceptions.cs) file by replacing the Exception class with other exception class, ex. [ArithmeticException](https://docs.microsoft.com/en-us/dotnet/api/system.arithmeticexception.-ctor).
 
 
 ## Fix Compiler Issues
