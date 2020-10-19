@@ -12,7 +12,6 @@ This is a beginner level task for practicing exception handling.
 
 1. Add exception handling constructions (try-catch) to [HandlingExceptions.cs](ExceptionHandling/HandlingExceptions.cs) file. See TODO comments there.
 2. Add exception throwing code (throw) to [ThrowingExceptions.cs](ExceptionHandling/ThrowingExceptions.cs) file. See TODO comments there.
-3. Read a [discussion about using non-specific exception types for throwing exceptions](https://stackoverflow.com/questions/22453650/why-are-we-not-to-throw-these-exceptions) and [CA2201 rule documentation](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca2201). You can fix the warning in the [HandlingExceptions.cs](ExceptionHandling/HandlingExceptions.cs) file by replacing the Exception class with other exception class, ex. [ArithmeticException](https://docs.microsoft.com/en-us/dotnet/api/system.arithmeticexception.-ctor).
 
 
 ## Fix Compiler Issues
@@ -20,6 +19,12 @@ This is a beginner level task for practicing exception handling.
 Additional style and code checks are enabled for the projects in this solution to help you maintaining consistency of the project source code and avoiding silly mistakes. [Review the Error List](https://docs.microsoft.com/en-us/visualstudio/ide/find-and-fix-code-errors#review-the-error-list) in Visual Studio to see all compiler warnings and errors.
 
 If a compiler error or warning message is not clear, [review errors details](https://docs.microsoft.com/en-us/visualstudio/ide/find-and-fix-code-errors#review-errors-in-detail) or google the error or warning code to get more information about the issue.
+
+### "System.Exception should not be thrown by user code"
+
+You will get a warning message saying that System.Exception should not be used in your code during compilation process and in Sonar's output. Read a [discussion about using non-specific exception types for throwing exceptions](https://stackoverflow.com/questions/22453650/why-are-we-not-to-throw-these-exceptions) and [CA2201 rule documentation](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca2201).
+
+Ignore this warning for the task, but remember - *never ever throw an instance of the Exception class* (unless you have a good reason for doing this).
 
 
 ## Save Your Work
