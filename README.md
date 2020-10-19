@@ -26,6 +26,16 @@ You will get a warning message saying that System.Exception should not be used i
 
 Ignore this warning for the task, but remember - *never ever throw an instance of the Exception class* (unless you have a good reason for doing this).
 
+```cs
+// DO
+throw new ArgumentNullException();
+throw new ArgumentException();
+throw new ArgumentOutOfRangeException();
+
+// DON'T
+throw new Exception();
+```
+
 
 ## Save Your Work
 
