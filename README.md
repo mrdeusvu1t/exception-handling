@@ -22,7 +22,7 @@ If a compiler error or warning message is not clear, [review errors details](htt
 
 ### "System.Exception should not be thrown by user code"
 
-You will get a warning message saying that System.Exception should not be used in your code during compilation process and in Sonar's output. Read a [discussion about using non-specific exception types for throwing exceptions](https://stackoverflow.com/questions/22453650/why-are-we-not-to-throw-these-exceptions) and [CA2201 rule documentation](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca2201).
+You will get a warning message saying that System.Exception should not be used in your code during compilation process (CA2201: Exception type System.Exception is not sufficiently specific) and in Sonar's output (System.Exception should not be thrown by user code). Read a [discussion about using non-specific exception types for throwing exceptions](https://stackoverflow.com/questions/22453650/why-are-we-not-to-throw-these-exceptions) and [CA2201 rule documentation](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca2201).
 
 Ignore this warning for the task, but remember - *never ever throw an instance of the Exception class* (unless you have a good reason for doing this).
 
@@ -35,6 +35,7 @@ throw new ArgumentOutOfRangeException();
 // DON'T
 throw new Exception();
 throw new ApplicationException();
+throw new SystemException();
 ```
 
 
