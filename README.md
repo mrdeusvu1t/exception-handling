@@ -34,6 +34,7 @@ throw new ArgumentOutOfRangeException();
 
 // DON'T
 throw new Exception();
+throw new ApplicationException();
 ```
 
 
